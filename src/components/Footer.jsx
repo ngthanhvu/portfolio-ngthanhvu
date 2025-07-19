@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <footer className="w-full bg-gray-50 py-6">
+        <footer className="w-full bg-gray-50 py-6 dark:bg-gray-900">
             <div className="flex items-center justify-center gap-1">
-                <p className="text-sm text-gray-700 flex items-center">
+                <p className="text-sm text-gray-700 flex items-center dark:text-gray-300">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

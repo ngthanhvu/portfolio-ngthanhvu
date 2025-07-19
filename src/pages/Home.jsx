@@ -25,7 +25,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="w-full">
+        <div className="w-full bg-white text-black dark:bg-gray-900 dark:text-white">
             <SectionHead info={info} />
             <AboutMe />
             <Skill />

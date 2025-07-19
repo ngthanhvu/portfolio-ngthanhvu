@@ -29,10 +29,10 @@ const Project = () => {
     if (loading) return null;
 
     return (
-        <section className="w-full bg-gray-50 py-16 md:py-20 2xl:py-24" id="work">
+        <section className="w-full bg-gray-50 dark:bg-gray-900 py-16 md:py-20 2xl:py-24" id="work">
             <div className="mx-auto w-full max-w-7xl flex flex-col gap-12 px-4 md:px-8">
                 <div className="flex flex-col items-center gap-4">
-                    <div className="rounded-xl bg-gray-200 px-5 py-1">
+                    <div className="rounded-xl bg-gray-200 dark:bg-gray-800 px-5 py-1">
                         <p className="text-sm font-medium">{t('project.section_title')}</p>
                     </div>
                     <p className="text-lg md:text-xl max-w-xl text-center">
@@ -44,7 +44,7 @@ const Project = () => {
                     {projects.map((p, idx) => (
                         <div
                             key={p.id || idx}
-                            className="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col"
+                            className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden flex flex-col"
                         >
                             <div className="w-full h-[180px] overflow-hidden">
                                 <a href={p.link} target="_blank" rel="noopener noreferrer">
@@ -56,11 +56,11 @@ const Project = () => {
                                 </a>
                             </div>
                             <div className="flex flex-col gap-4 p-5">
-                                <h3 className="text-lg font-semibold text-gray-900">{p.title}</h3>
-                                <p className="text-sm text-gray-700">{p.description}</p>
+                                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-300">{p.title}</h3>
+                                <p className="text-sm text-gray-700 dark:text-gray-400">{p.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {(p.language || []).slice(0, 6).map((tool, i) => (
-                                        <span key={i} className="text-xs bg-gray-200 px-3 py-1 rounded-full">
+                                        <span key={i} className="text-xs bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full">
                                             {tool}
                                         </span>
                                     ))}

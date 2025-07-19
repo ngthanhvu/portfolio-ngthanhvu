@@ -27,12 +27,12 @@ const Skills = () => {
     }, []);
 
     return (
-        <section className="w-full bg-gray-50 py-16 md:py-20 2xl:py-24" id="skills">
+        <section className="w-full bg-gray-50 dark:bg-gray-900 py-16 md:py-20 2xl:py-24" id="skills">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
                 {/* Section heading */}
                 <div className="flex flex-col items-center gap-4">
                     <div className="self-center">
-                        <div className="flex items-center justify-center rounded-xl bg-gray-200 px-5 py-1">
+                        <div className="flex items-center justify-center rounded-xl bg-gray-200 dark:bg-gray-800 px-5 py-1">
                             <p className="text-sm font-medium">{t('skills.section_title')}</p>
                         </div>
                     </div>
