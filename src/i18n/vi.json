@@ -1,0 +1,44 @@
+{
+    "sectionHead": {
+        "greeting": "Chào, tôi là {{name}}",
+        "available": "Sẵn sàng nhận dự án mới",
+        "bio": "Tôi là lập trình viên web, hiện đang học và cải thiện kỹ năng với PHP, MySQL, Vue và React...",
+        "location": "Buôn Ma Thuột, Việt Nam"
+    },
+    "header": {
+        "about": "Giới thiệu",
+        "skills": "Kỹ năng",
+        "projects": "Dự án",
+        "contact": "Liên hệ",
+        "download_cv": "Tải CV"
+    },
+    "contact": {
+        "get_in_touch": "Liên hệ",
+        "whats_next": "Bạn cần lập trình viên, có câu hỏi, hoặc chỉ muốn kết nối? Hãy liên hệ với tôi!",
+        "find_me": "Bạn cũng có thể tìm tôi trên các nền tảng này!"
+    },
+    "project": {
+        "section_title": "Dự án",
+        "section_desc": "Một số dự án tiêu biểu tôi đã thực hiện:",
+        "visit": "Xem dự án"
+    },
+    "skills": {
+        "section_title": "Kỹ năng",
+        "section_desc": "Những kỹ năng, công cụ và công nghệ tôi thành thạo:",
+        "loading": "Đang tải kỹ năng...",
+        "no_data": "Không có dữ liệu"
+    },
+    "about": {
+        "section_title": "Giới thiệu bản thân",
+        "title": "Bạn có tò mò về tôi không? Đây là thông tin dành cho bạn:",
+        "image": "/cover.jpg",
+        "content": [
+            "Tôi là một lập trình viên web full-stack đam mê với kinh nghiệm ở cả frontend và backend.",
+            "Tôi chuyên về các công nghệ hiện đại như Vue.js, React, Laravel và Node.js, tập trung vào việc xây dựng ứng dụng web hiệu quả và dễ bảo trì.",
+            "Trong những năm qua, tôi đã thực hiện nhiều dự án sử dụng RESTful API, thiết kế responsive và xử lý dữ liệu thời gian thực.",
+            "Tôi yêu thích việc kết hợp giữa code sạch và giao diện đẹp mắt với Tailwind CSS và phương pháp phát triển theo hướng component.",
+            "Tôi cũng đang tìm hiểu các nền tảng đám mây như Supabase và Firebase để nâng cao hiệu năng và khả năng mở rộng của ứng dụng.",
+            "Việc học hỏi không ngừng và hoàn thiện kỹ năng là trọng tâm trong quá trình phát triển của tôi."
+        ]
+    }
+}

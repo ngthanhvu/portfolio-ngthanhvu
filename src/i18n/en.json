@@ -1,0 +1,44 @@
+{
+    "sectionHead": {
+        "greeting": "Hi, I'm {{name}}",
+        "available": "Available for new projects",
+        "bio": "I am a web developer currently learning and improving my skills with PHP, MySQL, Vue, and React...",
+        "location": "Buon Ma Thuot, VietNam"
+    },
+    "header": {
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Project",
+        "contact": "Contact",
+        "download_cv": "Download CV"
+    },
+    "contact": {
+        "get_in_touch": "Get in touch",
+        "whats_next": "What’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.",
+        "find_me": "You may also find me on these platforms!"
+    },
+    "project": {
+        "section_title": "Projects",
+        "section_desc": "Some of the noteworthy projects I have built:",
+        "visit": "Visit Project"
+    },
+    "skills": {
+        "section_title": "Skills",
+        "section_desc": "The skills, tools and technologies I am really good at:",
+        "loading": "Loading skills...",
+        "no_data": "No data"
+    },
+    "about": {
+        "section_title": "About me",
+        "title": "Curious about me? Here you have it:",
+        "image": "/cover.jpg",
+        "content": [
+            "I am a passionate full-stack web developer with experience in both frontend and backend development.",
+            "I specialize in modern technologies like Vue.js, React, Laravel, and Node.js, focusing on building scalable and maintainable web applications.",
+            "Over the years, I have worked on various projects involving RESTful APIs, responsive design, and real-time data handling.",
+            "I enjoy combining clean code with beautiful UI using tools like Tailwind CSS and component-driven development.",
+            "I am also exploring cloud platforms and tools such as Supabase and Firebase to enhance app performance and scalability.",
+            "Continuous learning and improving my craft is at the heart of my work as a developer."
+        ]
+    }
+}
