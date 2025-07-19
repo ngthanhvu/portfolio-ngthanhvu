@@ -21,7 +21,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        document.title = "NGTHANHVU | Developer Web";
+        document.title = "Thanh Vu - Web Developer";
     }, [])
 
     return (
