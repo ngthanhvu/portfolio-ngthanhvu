@@ -10,7 +10,9 @@
         "skills": "Skills",
         "projects": "Project",
         "contact": "Contact",
-        "download_cv": "Download CV"
+        "download_cv": "Download CV",
+        "light_mode": "Light mode",
+        "dark_mode": "Dark mode"
     },
     "contact": {
         "get_in_touch": "Get in touch",

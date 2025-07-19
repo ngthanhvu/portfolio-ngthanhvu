@@ -10,7 +10,9 @@
         "skills": "Kỹ năng",
         "projects": "Dự án",
         "contact": "Liên hệ",
-        "download_cv": "Tải CV"
+        "download_cv": "Tải CV",
+        "light_mode": "Chế độ sáng",
+        "dark_mode": "Chế độ tối"
     },
     "contact": {
         "get_in_touch": "Liên hệ",
