@@ -12,7 +12,9 @@
         "contact": "Liên hệ",
         "download_cv": "Tải CV",
         "light_mode": "Chế độ sáng",
-        "dark_mode": "Chế độ tối"
+        "dark_mode": "Chế độ tối",
+        "tools": "Công cụ",
+        "password_generator": "Tạo mật khẩu"
     },
     "contact": {
         "get_in_touch": "Liên hệ",
@@ -42,5 +44,18 @@
             "Tôi cũng đang tìm hiểu các nền tảng đám mây như Supabase và Firebase để nâng cao hiệu năng và khả năng mở rộng của ứng dụng.",
             "Việc học hỏi không ngừng và hoàn thiện kỹ năng là trọng tâm trong quá trình phát triển của tôi."
         ]
+    },
+    "password_generator": {
+        "choose_type": "Chọn loại mật khẩu",
+        "characters": "Số ký tự",
+        "numbers": "Số",
+        "symbols": "Ký tự đặc biệt",
+        "generated": "Mật khẩu đã tạo",
+        "copy": "Sao chép mật khẩu",
+        "refresh": "Làm mới mật khẩu",
+        "random": "Ngẫu nhiên",
+        "memorable": "Gợi nhớ",
+        "pin": "PIN",
+        "copied": "Đã sao chép!"
     }
 }

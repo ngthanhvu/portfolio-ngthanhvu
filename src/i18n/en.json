@@ -12,7 +12,9 @@
         "contact": "Contact",
         "download_cv": "Download CV",
         "light_mode": "Light mode",
-        "dark_mode": "Dark mode"
+        "dark_mode": "Dark mode",
+        "tools": "Tools",
+        "password_generator": "Password Generator"
     },
     "contact": {
         "get_in_touch": "Get in touch",
@@ -42,5 +44,18 @@
             "I am also exploring cloud platforms and tools such as Supabase and Firebase to enhance app performance and scalability.",
             "Continuous learning and improving my craft is at the heart of my work as a developer."
         ]
+    },
+    "password_generator": {
+        "choose_type": "Choose password type",
+        "characters": "Characters",
+        "numbers": "Numbers",
+        "symbols": "Symbols",
+        "generated": "Generated password",
+        "copy": "Copy password",
+        "refresh": "Refresh",
+        "random": "Random",
+        "memorable": "Memorable",
+        "pin": "PIN",
+        "copied": "Copied"
     }
 }

@@ -6,9 +6,12 @@ import { useState, useRef, useEffect } from 'react';
 const Header = () => {
     const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
+    const [toolOpen, setToolOpen] = useState(false);
+    const toolTimeout = useRef(null);
     const dropdownRef = useRef(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const mobileMenuRef = useRef(null);
+
     const languages = [
         { code: 'vi', flag: '/flag-vn.svg' },
         { code: 'en', flag: '/flag-en.svg' }
@@ -51,26 +54,48 @@ const Header = () => {
     return (
         <header className="sticky top-0 z-30 w-full border-b border-transparent bg-white dark:bg-gray-900 max-md:border-gray-100 dark:border-gray-800">
             <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8">
-
-                {/* Logo */}
                 <Link to="/" className="text-2xl md:text-3xl tracking-[-0.02em] text-gray-900 dark:text-white font-bold">
                     &lt;NGTHANHVU /&gt;
                 </Link>
 
-                {/* Nav links + action buttons (desktop) */}
                 <div className="hidden items-center gap-6 md:flex">
-                    {/* Navigation links */}
                     <ul className="flex list-none items-center gap-6">
                         <li><a href="#about" className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">{t('header.about')}</a></li>
                         <li><a href="#skills" className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">{t('header.skills')}</a></li>
                         <li><a href="#work" className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">{t('header.projects')}</a></li>
                         <li><a href="#contact" className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">{t('header.contact')}</a></li>
+
+                        {/* Tools dropdown */}
+                        <li
+                            className="relative"
+                            onMouseEnter={() => {
+                                clearTimeout(toolTimeout.current);
+                                setToolOpen(true);
+                            }}
+                            onMouseLeave={() => {
+                                toolTimeout.current = setTimeout(() => setToolOpen(false), 200);
+                            }}
+                        >
+                            <button className="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex items-center gap-1">
+                                {t('header.tools')}
+                                <svg className={`w-4 h-4 transition-transform ${toolOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {toolOpen && (
+                                <ul className="absolute top-full mt-2 left-0 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg py-2 z-20">
+                                    <li>
+                                        <Link to="/genpass" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            {t('header.password_generator')}
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
                     </ul>
 
-                    {/* Divider */}
                     <div className="h-6 w-0.5 bg-gray-100 dark:bg-gray-700" />
 
-                    {/* Theme toggle & download button */}
                     <div className="flex items-center gap-4">
                         <button
                             onClick={() => setDarkMode(!darkMode)}
@@ -92,7 +117,6 @@ const Header = () => {
                             {t('header.download_cv')}
                         </a>
 
-                        {/* Language Switcher */}
                         <div className="relative" ref={dropdownRef}>
                             <button
                                 className="flex items-center justify-center gap-2 px-2 py-1 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-sm min-w-[40px] transition-colors duration-150"
@@ -121,7 +145,6 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-
                 {/* Mobile menu button */}
                 <button
                     type="button"
@@ -154,6 +177,16 @@ const Header = () => {
                                 <li><a href="#skills" className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400" onClick={() => setMobileMenuOpen(false)}>{t('header.skills')}</a></li>
                                 <li><a href="#work" className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400" onClick={() => setMobileMenuOpen(false)}>{t('header.projects')}</a></li>
                                 <li><a href="#contact" className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400" onClick={() => setMobileMenuOpen(false)}>{t('header.contact')}</a></li>
+                                <li>
+                                    <Link
+                                        to="/genpass"
+                                        className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {t('header.password_generator')}
+                                    </Link>
+                                </li>
+
                             </ul>
                             <div className="h-0.5 w-full bg-gray-100 dark:bg-gray-700 my-2" />
                             {/* Theme toggle */}
